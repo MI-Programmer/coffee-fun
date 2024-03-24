@@ -169,8 +169,8 @@
         tantalize your taste buds and elevate your coffee experience.
       </p>
 
-      <div class="row">
-        <div class="product-card">
+      <div class="row" id="row-products">
+        <!-- <div class="product-card">
           <div class="product-icons">
             <a href="#"><i data-feather="shopping-cart"></i></a>
             <a href="#"><i data-feather="eye"></i></a>
@@ -251,7 +251,7 @@
             </div>
             <div class="product-price">IDR 25k <span>IDR 40k</span></div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- Products section end -->
@@ -315,9 +315,11 @@
 
     <!-- Modal Box Item Detail start -->
     <div class="modal" id="item-detail-modal">
-      <div class="modal-container">
-        <a href="#" class="close-icon"><i data-feather="x"></i></a>
-        <div class="modal-content">
+      <div class="modal-container" id="modal-container">
+        <a class="close-icon" onclick="removeModal()"
+          ><i data-feather="x"></i
+        ></a>
+        <!-- <div class="modal-content">
           <img src="/img/products/3.jpg" alt="Product 3" />
           <div class="product-content">
             <h3>Product 3</h3>
@@ -339,7 +341,7 @@
               ><i data-feather="shopping-cart"></i> <span>add to cart</span></a
             >
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- Modal Box Item Detail end -->
@@ -348,6 +350,12 @@
     <script>
       feather.replace();
     </script>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/7318ba226e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- My Javascript -->
     <script src="./js/script.js"></script>

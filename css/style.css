@@ -355,13 +355,13 @@ html {
 .products .product-icons a {
   width: 4rem;
   height: 4rem;
-  color: #fff;
   margin: 0.3rem;
   border: 1px solid #666;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .products .product-icons a:hover {
@@ -381,14 +381,10 @@ html {
   font-size: 2rem;
 }
 
-.products .product-content .product-stars {
+.products .product-content .product-stars .fa-star {
   font-size: 1.7rem;
-  padding: 0.8rem;
+  padding: 0.8rem 0.2rem;
   color: var(--primary);
-}
-
-.products .product-content .product-stars .star-full {
-  fill: var(--primary);
 }
 
 .products .product-price {
@@ -529,6 +525,7 @@ footer .credit a {
 .modal .modal-container .close-icon {
   position: absolute;
   right: 1rem;
+  cursor: pointer;
 }
 
 .modal .modal-container .modal-content {
@@ -546,16 +543,34 @@ footer .credit a {
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin-top: 1.2rem;
+  max-width: 95%;
+}
+
+.modal .modal-container .modal-content .product-stars .fa-star {
+  color: var(--primary);
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.modal .modal-container .modal-content .product-price span {
+  text-decoration: line-through;
+  color: #666;
 }
 
 .modal .modal-container .modal-content a {
   display: flex;
-  gap: 1rem;
-  width: 12rem;
+  gap: 0.5rem;
+  width: 14rem;
+  height: 4em;
   background-color: var(--primary);
   color: #fff;
   margin-top: 1rem;
   padding: 1rem 1.6rem;
+  cursor: pointer;
+}
+
+.modal .modal-container .modal-content a img {
+  height: 20px;
 }
 
 /* Media Queries */
@@ -654,11 +669,17 @@ footer .credit a {
   }
 
   .modal .modal-container {
-    margin-bottom: 5%;
+    margin-bottom: 8%;
   }
 
   .modal .modal-container .modal-content {
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .modal .modal-container .modal-content a {
+    margin: 1rem auto 0;
   }
 }
 
