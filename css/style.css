@@ -364,6 +364,10 @@ html {
   cursor: pointer;
 }
 
+.products .product-icons a img {
+  height: 2rem;
+}
+
 .products .product-icons a:hover {
   background-color: var(--primary);
   border: 1px solid var(--primary);
@@ -563,18 +567,20 @@ footer .credit a {
 
 .modal .modal-container .modal-content a {
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
   width: 14rem;
-  height: 4em;
+  height: 4rem;
   background-color: var(--primary);
   color: #fff;
   margin-top: 1rem;
-  padding: 1rem 1.6rem;
+  padding: 0 1.6rem;
   cursor: pointer;
 }
 
 .modal .modal-container .modal-content a img {
-  height: 20px;
+  margin-top: 2rem;
+  height: 2rem;
 }
 
 /* Media Queries */
