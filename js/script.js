@@ -1,7 +1,7 @@
 // Data Products
 const dataProducts = [
   {
-    image: "/img/products/1.jpg",
+    image: "img/products/1-p.jpg",
     noProduct: 1,
     title: "Coffee Been",
     desc: "Welcome to our coffee shop, where every sip tells a story and every bean is carefully selected to ensure a remarkable experience. Our signature Coffee Bean blend is a testament to our dedication to quality and taste.",
@@ -10,7 +10,7 @@ const dataProducts = [
     realPrice: "55",
   },
   {
-    image: "/img/products/2.jpg",
+    image: "img/products/2-p.jpg",
     noProduct: 2,
     title: "Coffee Cup",
     desc: "Elevate your coffee-drinking experience with our exquisite collection of coffee cups. Crafted with precision and style, each cup is designed to enhance the flavors and aromas of our premium brews.",
@@ -19,7 +19,7 @@ const dataProducts = [
     realPrice: "30",
   },
   {
-    image: "/img/products/3.jpg",
+    image: "img/products/3-p.jpg",
     noProduct: 3,
     title: "Croissant",
     desc: "Indulge in the exquisite taste of our freshly baked croissants at our cozy coffee shop. Crafted with precision and passion, our croissants are a delightful blend of buttery richness and flaky texture, perfect for your morning pick-me-up or afternoon treat.",
@@ -28,7 +28,7 @@ const dataProducts = [
     realPrice: "25",
   },
   {
-    image: "/img/products/4.jpg",
+    image: "img/products/4-p.jpg",
     noProduct: 4,
     title: "Brownie",
     desc: "Treat yourself to a moment of indulgence with our irresistible brownies. Baked fresh daily, our brownies are a harmonious blend of fudgy richness and decadent chocolate flavor.",
@@ -37,7 +37,7 @@ const dataProducts = [
     realPrice: "40",
   },
   {
-    image: "/img/products/5.jpg",
+    image: "img/products/5-p.jpg",
     noProduct: 5,
     title: "Muffin",
     desc: "Each muffin is lovingly baked to perfection, ensuring a burst of flavor in every bite. Whether you're in the mood for a sweet treat or a savory snack, our muffins are sure to satisfy your taste buds and brighten your day.",
@@ -46,7 +46,7 @@ const dataProducts = [
     realPrice: "50",
   },
   {
-    image: "/img/products/6.jpg",
+    image: "img/products/6-p.jpg",
     noProduct: 6,
     title: "Donut",
     desc: "Indulge in the irresistible allure of our donuts, boasting a perfect balance of soft, fluffy dough and delectable toppings. From classic glazed and powdered sugar to indulgent chocolate frosted and colorful sprinkles, our donut variety caters to every palate and preference.",
@@ -143,8 +143,8 @@ dataProducts.map((product) => {
 
   productsRow.innerHTML += `<div class="product-card">
           <div class="product-icons">
-            <a ><img src="/img/svg/shopping-cart.svg"/></a>
-            <a onclick="showModal(${product.noProduct})"><img src="/img/svg/eye.svg"/></a>
+            <a ><img src="img/svg/shopping-cart.svg"/></a>
+            <a onclick="showModal(${product.noProduct})"><img src="img/svg/eye.svg"/></a>
           </div>
           <div class="product-image">
             <img src="${product.image}" alt="Product ${product.noProssduct}" />
@@ -181,7 +181,7 @@ function showModal(noProduct) {
               ${stars}
             </div>
             <div class="product-price">IDR ${modalProduct.discPrice}k <span>IDR ${modalProduct.realPrice}k</span></div>
-            <a><img src="/img/svg/shopping-cart.svg"/> <span>add to cart</span></a
+            <a><img src="img/svg/shopping-cart.svg"/> <span>add to cart</span></a
             >
           </div>
         </div>`;
@@ -194,4 +194,3 @@ function removeModal() {
   itemDetailModal.style.display = "none";
   modalContainer.lastElementChild.remove();
 }
-ss;

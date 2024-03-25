@@ -692,5 +692,13 @@ footer .credit a {
 
   .modal .modal-container {
     margin-bottom: 15%;
+    max-height: 48rem;
+  }
+
+  .modal .modal-container .modal-content {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }
