@@ -539,6 +539,10 @@ footer .credit a {
   margin-bottom: 2rem;
 }
 
+.modal .modal-container .modal-content h3 {
+  font-size: 2rem;
+}
+
 .modal .modal-container .modal-content p {
   font-size: 1.2rem;
   line-height: 1.8rem;
@@ -678,6 +682,14 @@ footer .credit a {
     text-align: center;
   }
 
+  .modal .modal-container .modal-content img {
+    margin-right: 0;
+  }
+
+  .modal .modal-container .modal-content p {
+    max-width: 100%;
+  }
+
   .modal .modal-container .modal-content a {
     margin: 1rem auto 0;
   }
@@ -692,7 +704,7 @@ footer .credit a {
 
   .modal .modal-container {
     margin-bottom: 15%;
-    max-height: 48rem;
+    max-height: 50rem;
   }
 
   .modal .modal-container .modal-content {
