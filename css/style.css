@@ -18,6 +18,23 @@ body {
   color: #fff;
 }
 
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255, 0.5);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -73,12 +90,32 @@ html {
   transform: scaleX(0.5);
 }
 
-.navbar .navbar-extra a {
+.navbar .navbar-extra {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-extra a,
+#cart-btn {
+  display: inline-block;
   color: #fff;
   margin: 0 0.5rem;
 }
 
+.navbar-extra .cart-btn {
+  margin-right: 5px;
+}
+
 .navbar .navbar-extra a:hover {
+  transform: scale(1.08);
+  color: var(--primary);
+}
+
+.navbar-extra .cart-btn:hover {
+  transform: scale(1.08);
+}
+
+#shopping-cart-btn:hover {
   color: var(--primary);
 }
 
@@ -123,13 +160,30 @@ html {
 
 /* Shopping Cart */
 
+.cart-btn {
+  position: relative;
+}
+
+.cart-btn .amount-item {
+  position: absolute;
+  top: -0.6rem;
+  right: -0.3rem;
+  background: var(--primary);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .shopping-cart {
   position: absolute;
   top: 100%;
   right: -100%;
   height: 100vh;
   width: 35rem;
-  padding: 0 1.5rem;
+  padding: 0 0.2rem 0 1.5rem;
   background-color: #fff;
   color: var(--bg);
   transition: 0.3s;
@@ -163,14 +217,65 @@ html {
   font-size: 1.2rem;
 }
 
-.shopping-cart .cart-item .remove-item {
+.shopping-cart .cart-item .total-item {
+  width: 25%;
   position: absolute;
-  right: 1rem;
+  top: 10%;
+  right: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.shopping-cart .cart-item .total-item .amount-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopping-cart .cart-item .total-item .amount-item .cart-btn-amount {
+  background: var(--primary);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 50%;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
-.shopping-cart .cart-item .remove-item:hover {
-  color: var(--primary);
+.shopping-cart .cart-item .total-item .total-price-item {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.shopping-cart .total-price-items {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 10px 11% 0 1%;
+}
+
+.shopping-cart .shopping-cart-items {
+  max-height: 73vh;
+  overflow: auto;
+}
+
+.shopping-cart .shopping-cart-items::-webkit-scrollbar-thumb {
+  background: rgba(1, 1, 3, 0.2);
+}
+
+.shopping-cart .shopping-cart-items::-webkit-scrollbar-thumb:hover {
+  background: rgba(1, 1, 3, 0.4);
+}
+
+#order-products-btn {
+  display: none;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
 }
 
 /* Hero Section */
@@ -491,6 +596,8 @@ footer .credit a {
 /* Item Detail */
 .modal {
   display: none;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 2000;
   left: 0;
@@ -504,20 +611,22 @@ footer .credit a {
 }
 
 .modal .modal-container {
-  position: relative;
+  width: 80%;
+  max-width: 900px;
+  display: block;
+  margin: auto;
+  position: absolute;
   background-color: #fefefe;
   color: var(--bg);
-  margin: 15% auto 10%;
   padding: 1.2rem;
   border: 1px solid #666;
-  width: 80%;
-  animation: animateModal 0.5s;
+  animation: animateModal 0.5s ease-in-out;
 }
 
 /* Modal Animation */
 @keyframes animateModal {
   from {
-    top: -300px;
+    top: -100px;
     opacity: 0;
   }
   to {
@@ -581,6 +690,24 @@ footer .credit a {
 .modal .modal-container .modal-content a img {
   margin-top: 2rem;
   height: 2rem;
+}
+
+.modal-ordered {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-ordered h2 {
+  text-align: center;
+}
+
+.modal-ordered .images-modal-ordered {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
 }
 
 /* Media Queries */
