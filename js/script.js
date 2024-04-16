@@ -223,12 +223,12 @@ function removeFromCart(noProduct) {
 }
 
 function makeItemCart(noProductPara) {
-  dataProducts.forEach(({ noProduct, image, discPrice }) => {
+  dataProducts.forEach(({ title, noProduct, image, discPrice }) => {
     if (cartData[noProduct].amount && !cartData[noProduct].add) {
       shoppingCartItems.innerHTML += `<div class="cart-item" id="cart-item${noProduct}">
           <img src=${image} alt=${noProduct} s/>
           <div class="item-detail">
-            <h3>Product ${noProduct}</h3>
+            <h3>${title}</h3>
             <div class="item-price">IDR ${discPrice}k</div>
           </div>
           <div class="total-item">
